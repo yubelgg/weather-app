@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #121212;
+}
+
+.main-box {
+  width: 50%;
+  background: whitesmoke;
+  border-radius: 10px;
+}
+
+.title {
+  color: #3700b3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 2rem;
+}
+
+#input-text {
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.weather-box {
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.weather-box img {
+  padding: auto;
+  height: auto;
+  width: 300px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+}
+
+.temperature-box {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-condition {
+  display: flex;
+  justify-content: center;
+}
+
+.high-low {
+  display: flex;
+  justify-content: space-evenly;
+}
