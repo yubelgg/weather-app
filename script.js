@@ -1,5 +1,3 @@
-require("dotenv").config();
-console.log(process.env.API_KEY);
 const content = document.querySelector(".main-box"),
   input = content.querySelector(".input"),
   inputInfo = input.querySelector(".input-text"),
@@ -13,11 +11,13 @@ inputField.addEventListener("keyup", (click) => {
 });
 
 function CallDisplay(city) {
-  const apikey = process.env.API_KEY;
+  let apikey;
   let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apikey}`;
   fetch(api)
     .then((response) => response.json())
     .then((result) => {
+      // would be better for all this to be a function
+      // result.weather returning undefined values (unable to update weather conditions)
       if (result.cod == "404") {
         content.querySelector(
           ".location"
@@ -27,7 +27,6 @@ function CallDisplay(city) {
         const temp = Math.floor(result.main.temp);
         const tempHigh = Math.floor(result.main.temp_max);
         const tempLow = Math.floor(result.main.temp_min);
-        const weatherCondition = result.weather.main;
 
         locationDetail.innerText = name;
         content.querySelector(".number").innerText = temp;
@@ -37,8 +36,6 @@ function CallDisplay(city) {
         content.querySelector(
           ".high-low .tempLow"
         ).innerText = `L: ${tempLow} F°`;
-        content.querySelector(".weather-condition").innerText =
-          weatherCondition;
       }
     });
 }

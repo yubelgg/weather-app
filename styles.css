@@ -22,7 +22,7 @@ body {
 }
 
 .title {
-  color: #3700b3;
+  color: blue;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -63,14 +63,11 @@ body {
 .temperature-box {
   display: flex;
   justify-content: center;
-}
-
-.weather-condition {
-  display: flex;
-  justify-content: center;
+  font-size: 75px;
 }
 
 .high-low {
   display: flex;
   justify-content: space-evenly;
+  font-size: 25px;
 }
