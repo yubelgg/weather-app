@@ -17,12 +17,18 @@ body {
 
 .main-box {
   width: 50%;
-  background: whitesmoke;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    360deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   border-radius: 10px;
 }
 
 .title {
-  color: blue;
+  color: whitesmoke;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -44,6 +50,9 @@ body {
 }
 
 .weather-box {
+  display: flex;
+  justify-content: center;
+  color: white;
   display: grid;
   align-items: center;
   justify-content: space-evenly;
@@ -52,7 +61,7 @@ body {
 .weather-box img {
   padding: auto;
   height: auto;
-  width: 300px;
+  width: 250px;
 }
 
 .location {
@@ -69,5 +78,11 @@ body {
 .high-low {
   display: flex;
   justify-content: space-evenly;
+  font-size: 25px;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
   font-size: 25px;
 }
