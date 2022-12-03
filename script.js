@@ -9,7 +9,7 @@ const content = document.querySelector(".main-box"),
   weatherDesc = content.querySelector(".desc"),
   weatherIcon = content.querySelector(".weather-box img");
 
-let apikey = "9fd4e122e74c1b16ae48a4dd3dde4e95";
+let apikey;
 
 inputField.addEventListener("keyup", (click) => {
   if (click.key == "Enter" && inputField != "") {
